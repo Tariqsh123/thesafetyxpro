@@ -1046,7 +1046,6 @@ body {
 }
 
 /* Whatsapp */
-
 .whatsapp-widget {
   position: fixed;
   bottom: 20px;
@@ -1065,9 +1064,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+.whatsapp-icon:hover {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
 #icon-text img {
   height: 60px;
   width: 90px;
+  transition: transform 0.3s ease-in-out;
+}
+#icon-text img:hover {
+  transform: scale(1.05) rotate(-3deg);
 }
 
 @media (min-width: 2000px) {
