@@ -1,0 +1,647 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#Technology-main-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#Technology-top-main-container {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Technology-bottom-main-container {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#Technology-top-main-container h1 {
+    font-size: 45px;
+    font-weight: 800;
+    width: 70%;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    color: #00326b;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: slideInRight 1s forwards;
+}
+
+#Technology-top-main-container h1 span {
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0;
+    animation: slideInRight 1s 0.5s forwards; 
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+#Technology-Card-main-container{
+    height: 400px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    perspective: 1500px;
+    align-items: center;
+}
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%) rotateY(20deg) rotateX(00deg);
+    }
+    100% {
+        transform: translateX(0) rotateY(20deg) rotateX(00deg);
+    }
+}
+@keyframes CardslideInRight {
+    0% {
+        transform: translateX(100%) rotateY(-20deg) rotateX(00deg);
+    }
+    100% {
+        transform: translateX(0) rotateY(-20deg) rotateX(00deg);
+    }
+}
+.Technology-card{
+    height: 85%;
+    background-color: rgb(255, 249, 249);
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: all 1s;
+}
+#Technology-first-card {
+    animation: slideInLeft 1s ease-out forwards;
+    border-left: 0.5px solid rgb(170, 170, 170);
+    border-right: 0.5px solid rgb(209, 206, 206);
+    box-shadow: -20px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+#Technology-second-card {
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(170, 170, 170);
+    width: 350px;
+    height: 95%;
+}
+
+#Technology-third-card {
+    animation: CardslideInRight 1s ease-out forwards;
+    border-right: 0.5px solid rgb(170, 170, 170);
+    border-left: 0.5px solid rgb(209, 206, 206);
+    box-shadow: 20px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+#Technology-card-top{
+    height: 150px;
+    perspective: 1500;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    position: relative;
+}
+#Technology-card-top::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 05px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#Technology-first-card #Technology-card-top{
+    box-shadow: -2px 0px 5px 0 rgb(170, 170, 170) ;
+}
+#Technology-first-card #Technology-card-top::after{
+    box-shadow: -5px 4px 5px 0 rgb(170, 170, 170) ;
+}
+#Technology-second-card #Technology-card-top{
+    border-radius: 05px;
+    box-shadow: 2px 4px 20px 0 rgb(170, 170, 170);
+}
+#Technology-third-card #Technology-card-top{
+    box-shadow: 2px 0px 5px 0 rgb(170, 170, 170) ;
+}
+#Technology-third-card #Technology-card-top::after{
+    box-shadow: 3px 3px 5px 0 rgb(170, 170, 170) ;
+}
+#Technology-card-top h3{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: left;
+    color: #00326b;
+}
+#Technology-first-card #Technology-card-top h3{
+    transform: rotateY(20deg)rotateX(0);
+}
+#Technology-second-card #Technology-card-top h3{
+    font-size: 20px;
+
+}
+#Technology-third-card #Technology-card-top h3{
+    transform: rotateY(-20deg)rotateX(0);
+}
+#Technology-card-top p{
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+#Technology-first-card #Technology-card-top p{
+    transform: rotateY(20deg)rotateX(0);
+}
+#Technology-third-card #Technology-card-top p{
+    transform: rotateY(-20deg)rotateX(0);
+}
+#Technology-card-bottom{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 20px;
+    width: 100%;
+}
+#Technology-first-card #Technology-card-bottom{
+    transform: rotateY(20deg)rotateX(0deg);
+}
+#Technology-third-card #Technology-card-bottom{
+    transform: rotateY(-20deg)rotateX(0deg);
+}
+#Technology-card-bottom p {
+    font-size: 11.5px;
+    text-align: left;
+    font-weight: 600;
+    position: relative;
+    padding-left: 30px;
+}
+#Technology-first-card #Technology-card-bottom p,#Technology-third-card #Technology-card-bottom p{
+    margin-top: -05px;
+}
+
+#Technology-card-bottom p::before {
+    content: '\2713';
+    font-size: 8px;
+    color: #00326b;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00326b;
+}
+#Small-Technology-card-container{
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#Small-Technology-Card{
+    height: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 4px 1px gray;
+}
+#Small-Technology-Card-Top{
+    height: 150px;
+    width: 98%;
+    display: flex;
+    box-shadow: 1px 1px 5px 0;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+#Small-Technology-Card-Top h3{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: left;
+    color: #00326b;
+}
+#Small-Technology-Card-Top p{
+    font-size: 13px;
+    text-align: left;
+}
+#Small-Technology-Card-bottom{
+    height: 200px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+#Small-Technology-Card-bottom p {
+    font-size: 11px;
+    text-align: left;
+    font-weight: 600;
+    position: relative;
+    padding-left: 30px;
+}
+
+#Small-Technology-Card-bottom p::before {
+    content: '\2713';
+    font-size: 10px;
+    color: #00326b;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #00326b;
+}
+@media screen and (min-width: 3001px) and (max-width: 5000px){
+    #Technology-top-main-container h1 {
+        font-size: 60px;
+    }
+    #Technology-top-main-container h1 span {
+        font-size: 55px;
+    }
+    #Technology-Card-main-container{
+        height: 450px;
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1700px) and (max-width: 3000px){
+    #Technology-top-main-container h1 {
+        font-size: 50px;
+    }
+    #Technology-top-main-container h1 span {
+        font-size: 45px;
+    }
+    #Technology-Card-main-container{
+        height: 420px;
+        width: 55%;
+    }
+}
+@media (max-width: 1200px){
+    /* #Technology-card-top h3{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 900;
+        color: #1c732c;
+    }
+    #Technology-second-card #Technology-card-top h3{
+        font-size: 33px;
+    
+    }
+    #Technology-card-top p{
+        font-size: 17px;
+    } */
+     #Technology-Card-main-container{
+        width: 95%;
+     }
+    .Technology-card{
+        width: 350px;
+    }
+}
+@media (max-width: 991px) {
+   
+    #Technology-top-main-container h1 {
+        font-size: 40px;
+    }
+    #Technology-top-main-container h1 span {
+        font-size: 35px;
+    }
+    #Technology-main-container {
+        height: fit-content;
+    }
+    #Technology-bottom-main-container {
+        height: fit-content;
+    }
+    #Technology-Card-main-container{
+        display: none;
+    }
+    #Small-Technology-card-container{
+        display: flex;
+    }
+
+
+}
+@media (max-width: 768px) {
+    /* #Technology-top-main-container {
+        height: 250px;
+    } */
+    #Technology-main-container {
+        height: fit-content;
+    }
+    #Technology-bottom-main-container {
+        height: fit-content;
+    }
+    #Technology-Card-main-container{
+        display: none;
+    }
+    #Small-Technology-card-container{
+        display: flex;
+    }
+    #Technology-top-main-container h1 {
+        font-size: 35px;
+    }
+    #Technology-top-main-container h1 span {
+        font-size: 35px;
+    }
+}
+@media (max-width: 600px) {
+    /* #Technology-top-main-container {
+        height: 200px;
+    } */
+    #Technology-main-container {
+        height: fit-content;
+    }
+    #Technology-bottom-main-container {
+        height: fit-content;
+    }
+    #Technology-Card-main-container{
+        display: none;
+    }
+    #Small-Technology-card-container{
+        display: flex;
+    }
+    #Technology-top-main-container h1 {
+        font-size: 30px;
+    }
+
+    #Technology-top-main-container h1 span {
+        font-size: 28px;
+    }
+}
+@media (max-width: 399px) {
+    /* #Technology-top-main-container {
+        height: 150px;
+    } */
+    #Technology-main-container {
+        height: fit-content;
+      
+    }
+    #Technology-bottom-main-container {
+        height: fit-content;
+    }
+    #Technology-Card-main-container{
+        display: none;
+
+    }
+    #Small-Technology-card-container{
+        display: flex;
+        margin-bottom: 30px;
+        /* margin-top: 30px; */
+    }
+    #Technology-top-main-container h1 {
+        font-size: 22px;
+    }
+
+    #Technology-top-main-container h1 span {
+        font-size: 22px;
+    }
+}
+
+/* Harnesss Heading */
+#harness-heading-main-container{
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#harness-heading-main-container h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+    color: #00326b;
+}
+@media (max-width: 600px) {
+#harness-heading-main-container h2{
+    font-size: 30px;
+}
+}
+#harness-main-container{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#harness-inner-container{
+    height: 100%;
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.harness-reverse{
+    flex-direction: row-reverse;
+}
+#harness-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  border-radius: 10px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#harness-right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    padding-left: 40px;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+}
+#harness-right span{
+    font-size: large;
+    color: #00326b8c;
+    font-weight: 800;
+}
+#harness-right h3{
+    font-size: 30px;
+    color: #00326b;
+    font-weight: 900;
+}
+#harness-right p{
+    font-size: medium;
+    color: #00326b8c;
+}
+#harness-right ul{
+    display: flex;
+    justify-content: center;
+    color: #00326b8c;
+    font-size: small;
+    gap: 05px;
+    list-style: none;
+    flex-direction: column;
+}
+#harness-right ul li {
+  position: relative;
+  padding-left: 30px; 
+  margin-bottom: 10px;
+}
+
+#harness-right ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #00326b;
+  color: white;
+  font-size: 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#harness-right a{
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    font-size: large;
+    padding: 10px 20px;
+    background-color: #00326b;
+    color: white;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+#harness-right a:hover{
+    background-color: #002550;
+}
+
+@media (max-width: 991px) {
+    #harness-main-container {
+    height: fit-content;}
+#harness-right {
+    padding-left: 20px;
+    gap: 2px;
+}
+#harness-right h3 {
+    font-size: 25px;
+}
+#harness-right p {
+    font-size: small;
+}
+#harness-right ul li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#harness-right a {
+    padding: 08px 20px;
+    margin-top: 10px;
+}
+}
+@media (max-width: 768px) {
+        #harness-main-container {
+    height: fit-content;}
+#harness-right {
+    padding-left: 20px;
+    gap: 2px;
+}
+#harness-right span {
+    font-size: medium;
+}
+#harness-right h3 {
+    font-size: 20px;
+}
+#harness-right p {
+    font-size: small;
+}
+#harness-right ul {
+    gap: 0px;
+}
+#harness-right ul li::before {
+    top: 3px;
+    font-size: 10px;
+}
+    #harness-right a {
+        padding: 08px 20px;
+        margin-top: 10px;
+        font-size: medium;
+    }
+}
+@media (max-width: 600px) {
+#harness-main-container{
+    height: fit-content;
+    align-items: start;
+}
+#harness-inner-container{
+    height: fit-content;
+    align-items: start;
+    flex-direction: column;
+}
+#harness-left,#harness-right{
+    width: 100%;
+}
+}

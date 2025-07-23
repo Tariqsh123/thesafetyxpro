@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Swiper CSS -->
+<link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <title>The Safety XPro</title>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NavBar -->
+     <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <img src="Images/Logo.png" alt="Disrupt Labs Logo" class="logo-img">
+      </a>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="AI-Use-Cases.html">AI Use Cases</a></li>
+        <li><a href="About-us.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="schedule-Demo.css">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+<script>
+    const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+<!-- Navbar end -->
+
+<!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <p class="welcome-text">Welcome</p>
+        <h1 class="animated-text">Computer Vision AI for Industrial Safety</h1>
+        <p class="hero-sub">
+          Upgrade Your Existing CCTV Infrastructure With Artificial Intelligence For Proactive Industrial Safety.
+        </p>
+        <a href="schedule-Demo.css" class="hero-btn">Contact Today</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    const animatedText = document.querySelector(".animated-text");
+const phrases = ["Computer Vision AI for Safer Workplaces"];
+let currentPhraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const currentPhrase = phrases[currentPhraseIndex];
+  const displayedText = currentPhrase.substring(0, charIndex);
+  animatedText.textContent = displayedText;
+
+  if (!isDeleting) {
+    if (charIndex < currentPhrase.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else {
+      isDeleting = true;
+      setTimeout(typeEffect, 2000);
+    }
+  } else {
+    if (charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50);
+    } else {
+      isDeleting = false;
+      setTimeout(typeEffect, 500);
+    }
+  }
+}
+
+typeEffect();
+  </script>
+<!-- Hero Section -->
+
+<!-- Logo Carousel Section -->
+<section class="logo-carousel">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (1).png" alt="Logo 1"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (2).png" alt="Logo 2"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (3).png" alt="Logo 3"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (4).png" alt="Logo 4"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (5).png" alt="Logo 5"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (1).jpg" alt="Logo 6"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (2).jpg" alt="Logo 7"></div>
+      <div class="swiper-slide"><img src="Images/logo-carousel-img (3).jpg" alt="Logo 8"></div>
+    </div>
+  </div>
+</section>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      576: {
+        slidesPerView: 3,
+      },
+      0: {
+        slidesPerView: 2,
+      },
+    },
+  });
+</script>
+<!-- Logo Carousel Section End -->
+
+<!-- Card Heading Portion -->
+ <section id="card-heading">
+    <h4>Focused Area</h4>
+    <h2>The Safety Xpros Use AI-Powered Video Analytics To Enhance Workplace Safety!</h2>
+ </section>
+<!-- Card Heading Portion End-->
+
+<!-- Card Container -->
+<section class="card-container">
+    <div id="card-inner-container">
+   <!-- 1 -->
+  <div class="card">
+    <h3>PPE Module</h3>
+    
+   <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=QOhKOyDI6u6v&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>PPE is crucial for ensuring worker safety. Helmets, vests, boots, masks, and other gear are monitored to maintain a safe environment.</p>
+  </div>
+  <!-- 2 -->
+  <div class="card">
+    <h3>House Keeping Module</h3>
+    <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=113131&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>Clear pathways, unblocked emergency exits, and prompt spill cleanup are essential for preventing accidents.</p>
+  </div>
+   <!-- 3 -->
+  <div class="card">
+    <h3>Area Control Module</h3>
+    <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=22798&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>AI monitoring ensures operator presence and restricted access, attention to suspended loads, machine proximity, and worker counts for safety.</p>
+  </div>
+    <!-- 4 -->
+  <div class="card">
+    <h3>Forklift Control Module</h3>
+    <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=NMxYAQweqDLm&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>Forklift safety is paramount. We ensure safe distances, proper parking, and adherence to designated aisles for efficient material handling.</p>
+  </div>
+    <!-- 5 -->
+  <div class="card">
+    <h3>Other Safety Alert Module</h3>
+    <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=8122&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>Machine guards, closed electrical panels, stairrails, and camera integrity are monitored to enhance workplace safety.</p>
+  </div>
+    <!-- 6 -->
+  <div class="card">
+    <h3>Emergency Situation Module</h3>
+    <div class="card-icon">
+      <img src="https://img.icons8.com/?size=100&id=8773&format=png&color=FFFFFF" alt="Icon">
+    </div>
+    <p>During emergencies, we track person counts, respond to worker incidents, and ensure orderly evacuation using designated exits.</p>
+  </div>
+  </div>
+</section>
+<!-- Card Container -->
+
+<!-- Why Choose Us Section -->
+ <section class="Why-Choose-Us-Section">
+    <div id="Why-Choose-Us-Section-inner">
+        <div id="why-choose-us-left">
+            <h4>Why Choose us</h4>
+            <h2>Benefits of AI Computer Vision for HSE Management!</h2>
+            <p>The Safety Xpros provides AI computer vision for HSE management, ensuring 24/7 monitoring and proactive hazard detection. Our solution ensures safety compliance, efficient incident response, and data-driven decision-making. By reducing human error, we enhance safety and operational efficiency. Choose The Safety Xpros for scalable AI solutions revolutionizing HSE management.</p>
+            <div>
+            <button>Discover More</button>
+            </div>
+        </div>
+        <div id="why-choose-us-right">
+            <!-- 1 -->
+            <div id="why-choose-right-text-box">
+                <div id="why-choose-right-text-box-left">
+                    <h3>24/7</h3>
+                    <h5>Support</h5>
+                </div>
+                <div id="why-choose-right-text-box-right">
+                    <p>The Safety Xpros, committed to better protect you around the world.</p>
+                </div>
+
+            </div>
+                        <!-- 2 -->
+            <div id="why-choose-right-text-box">
+                <div id="why-choose-right-text-box-left">
+                    <h3>15</h3>
+                    <h5>Projects</h5>
+                </div>
+                <div id="why-choose-right-text-box-right">
+                    <p>Where you will find the same quality of service and dedication around the world.</p>
+                </div>
+
+            </div>
+                        <!-- 3 -->
+            <div id="why-choose-right-text-box">
+                <div id="why-choose-right-text-box-left">
+                    <h3>10</h3>
+                    <h5>Clients</h5>
+                </div>
+                <div id="why-choose-right-text-box-right">
+                    <p>Making us one of the leading AI Safety Solution company around the globe.</p>
+                </div>
+
+            </div>
+            <!-- end -->
+        </div>
+    </div>
+ </section>
+<!-- Why Choose Us Section end -->
+
+<!-- Real time Text Section -->
+ <div id="real-time-text-section-main-container">
+    <h6>Real-Time Industrial Safety Solutions</h6>
+    <h4>Our Cutting-Edge Safety Monitoring Software</h4>
+    <p>At The Safety Xpro, we transform experiences by leveraging cutting-edge technology like Vision AI to enhance safety and prevent accidents. We use convolutional neural network and transformer to develop advance Computer Vision AI models for enhanced accuracy. Explore the capabilities of our advanced safety monitoring software.</p>
+ </div>
+ <div id="real-time-section-image-1-container">
+    <img src="https://raw.githubusercontent.com/Tariqsh123/theDistruptsLab/refs/heads/main/Images/real-time-section-image-1.webp" alt="">
+ </div>
+  <div id="real-time-section-image-2-and-3-container">
+    <img src="https://thedisruptlabs.com/wp-content/uploads/2024/06/Axens_Design_File_Final_6.jpg" alt="">
+    <img src="https://thedisruptlabs.com/wp-content/uploads/2024/06/Axens_Design_File_Final_5.jpg" alt="">
+ </div>
+<!-- Real time Text Section End -->
+
+<!-- Step to follow Text -->
+ <div id="step-to-follow-text-container">
+    <h6>Steps we follow</h6>
+    <h3>Engagement Process</h3>
+    <p>The Safety Xpros Follows Three Simple Steps Engagement Process!</p>
+ </div>
+<!-- Step to follow Text End -->
+
+<!-- Step to follow Container -->
+ <div id="step-to-follow-main-container">
+    <div id="step-to-follow-inner-container">
+        <!-- box1 -->
+         <div id="step-to-follow-box">
+            <div id="step-to-follow-inner-box">
+                <h6>Phase 1: Assessment</h6>
+                <p><b> Goal:</b> Review your current CCTV network and discuss potential Alerts Deliverables: A detailed Assessment report + POC + Implementation Roadmap.</p>
+                <p><b>Outcome:</b>  You will have a detailed plan for how AI Visual Automation Enhance your Security, Safety and Compliance.</p>
+                <p><b> Format:</b> 2-week engagement Conducted virtually.</p>
+            </div>
+            <img src="Images/Arrow.webp" alt="">
+         </div>
+        <!-- end -->
+                 <!-- box1 -->
+         <div id="step-to-follow-box" style="flex-direction: row-reverse;">
+            <div id="step-to-follow-inner-box">
+                <h6>Phase 2: Implement</h6>
+                <p><b> Goal:</b> Source and Install the relevant hardware needed and optimize the AI models for the specific real time alerts.</p>
+                <p><b> Deliverables:</b> Real time AI Alerts Software for defined Surveillance tasks.</p>
+                <p><b> Outcome:</b> Better security, safety and compliance.</p>
+                <p><b> Format:</b> Client Side PM engages in Weekly calls to ensure smooth implementation with our PM.</p>
+            </div>
+        <img src="Images/Arrow.webp" alt="" style="transform: scaleX(-1);">
+
+         </div>
+        <!-- end -->
+                 <!-- box1 -->
+         <div id="step-to-follow-box">
+            <div id="step-to-follow-inner-box">
+                <h6>Phase 3: Manage</h6>
+                <p><b> Goal:</b> Ensure the software is updated and maintained.</p>
+                <p><b> Deliverables:</b> Remote and onsite support for any issues.</p>
+                <p><b> Outcome:</b> Make sure the software continues to provide value to the client.</p>
+                <p><b> Format:</b> Monthly check-ins to discuss potential issues and realign on any compliance rules.</p>
+            </div>
+            <img src="Images/Arrow.webp" alt="" style="opacity: 0;">
+         </div>
+        <!-- end -->
+    </div>
+ </div>
+<!-- Step to follow Container End-->
+
+<!-- Book a Call Section -->
+ <div id="book-a-call-main-container">
+    <div id="book-a-call-inner-container">
+        <div id="book-a-call-inner-left">
+            <h6>AI Analysis</h6>
+            <h3>Speak with an AI Expert Today</h3>
+            <p>Discover how our advanced safety AI solutions can transform your workplace and what you need to get started !</p>
+            <button>Book a Call</button>
+        </div>
+        <div id="book-a-call-inner-right">
+            <img src="https://thedisruptlabs.com/wp-content/uploads/2025/03/eae76400-6175-4234-b458-6d837d3a8692_removalai_preview-e1741945678521.png" alt="">
+        </div>
+    </div>
+ </div>
+<!-- Book a Call Section End -->
+
+<!-- Footer -->
+ <footer>
+    <div id="footer-inner-container">
+        <div id="footer-left">
+            <h2>The Safety Xpro</h2>
+            <p>Upgrade Your Existing CCTV Infrastructure With Artificial Intelligence For Proactive Industrial Safety.</p>
+            <div id="social-icon-container">
+               <a href="#"> <img src="https://img.icons8.com/?size=100&id=87264&format=png&color=FFFFFF" alt=""></a>
+                <a href="#"> <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF" alt=""></a>
+                <a href="#"> <img src="https://img.icons8.com/?size=100&id=34349&format=png&color=FFFFFF" alt=""></a>
+            </div>
+        </div>
+        <div id="footer-mid">
+            <h6>Quick Links</h6>
+            <ul>
+                <a href="index.html"> Home</a>
+                <a href="About-us.html">About</a>
+                <a href="Blog.html">Blogs</a>
+                <a href="schedule-Demo.css">Contact Us</a>
+                <a href="#">Privacy</a>
+                <a href="AI-Use-Cases.html">AI use Cases</a>
+            </ul>
+        </div>
+        <div id="footer-right">
+            <h6>Phone</h6>
+           <p> Phone: +447463151997</p>
+           <p> Email: najam@thebravenext.com</p>
+           <p> Address: 20 Wenlock Road, London, N1 7GU</p>
+        </div>
+    </div>
+ </footer>
+<!-- Footer -->
+
+
+
+    
+
+
+
+
+</body>
+</html>
